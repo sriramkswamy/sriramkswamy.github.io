@@ -23,7 +23,75 @@
 		<!-- CSS stylesheets -->
 		<link rel="stylesheet" href="./bootstrap/css/bootstrap.css" type="text/css" media="all" />
 		<link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" type="text/css" media="all" />
+
+		<!-- JS scripts -->
+		<script src="js/blur.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)	
+			// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+			//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+			//** Call: uniquevar.playclip() to play sound
+
+			var html5_audiotypes=
+			{ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+				"mp3": "audio/mpeg",
+				"mp4": "audio/mp4",
+				"ogg": "audio/ogg",
+				"wav": "audio/wav"
+			};
+
+			function createsoundbite(sound)
+			{"use strict";
+				var html5audio=document.createElement('audio');
+				if (html5audio.canPlayType)
+				{ //check support for HTML5 audio
+					for (var i=0; i<arguments.length; i++)
+					{
+						var sourceel=document.createElement('source');
+						sourceel.setAttribute('src', arguments[i]);
+						if (arguments[i].match(/\.(\w+)$/i))
+							{sourceel.setAttribute('type', html5_audiotypes[RegExp.$1]);}
+						html5audio.appendChild(sourceel);
+					}
+				html5audio.load();
+				html5audio.playclip=function()
+				{
+					html5audio.pause();
+					html5audio.currentTime=0;
+					html5audio.play();
+				};
+				return html5audio;
+				}
+				else
+				{
+				return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately");}};
+				}
+			}
+
+			var clicksound=createsoundbite("./name.wav", "./name.mp3","./name.ogg");	
+		</script>
+
+		<style type="text/css" media="screen">
+			.jumbotron
+			{
+				margin-bottom: 0px;
+				background: url('http://hhdwallpaper.com/wp-content/uploads/2014/08/Books-Stores-Blurred-Wide-Wallpapers.jpg');
+				background-position: 25% 75%;
+   				background-size: cover;
+  				background-repeat: no-repeat;
+				rotation: 180deg;
+   				color: white;
+    			text-shadow: black 0.3em 0.3em 0.3em;
+			}
+
+			#jumboname
+			{
+				color: #C0E2FF;
+			}
+		</style>
 	</head>
+
 	<body>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -32,8 +100,19 @@
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="js/bootstrap.min.js"></script>
 
-		<!-- heading -->
-		<h1>Sriram Krishnaswamy</h1>
+		<!-- jumbotron header -->
+		<header class="jumbotron">
+			<div id="Home" class="container">
+				<div class="col-lg-4 col-md-4 col-lg-offset-1 col-md-offset-1">
+					<h1>Hello</h1>
+					<h3>I'm <a id="jumboname" href="#current" onclick="clicksound.playclip()"><span class="glyphicon glyphicon-volume-up"></span> Sriram Krishnaswamy</a></h3>
+					<h5>and I'm a Graduate student</h5>
+				</div>
+				<div class="col-lg-7 col-md-7">
+					<img src="img/phd.png" class="img-responsive" alt="Obligatory PhD comics reference">
+				</div>
+			</div>
+		</header>
 
 
 	</body>
