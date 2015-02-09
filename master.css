@@ -1,10 +1,8 @@
 .intro-text
 {
-	/* display: table-cell; */
 	vertical-align: middle;
 	text-align: center;
-   	color: white;
-   	text-shadow: black 0.3em 0.3em 0.3em;
+   	color: black;
 }
 
 .intro-img
@@ -18,26 +16,6 @@
 {
 	max-width: 125px;
 	height: auto;
-}
-
-.jumbotron
-{
-	margin-bottom: 0px;
-	background: url('http://hhdwallpaper.com/wp-content/uploads/2014/08/Books-Stores-Blurred-Wide-Wallpapers.jpg') no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-#home-link
-{
-	color: #C0E2FF;
-}
-
-#intro-para-link
-{
-	color: #6AF99F;
 }
 
 #edu-logo
