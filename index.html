@@ -100,8 +100,8 @@
 					<ul class="nav navbar-nav">
 						<li><a href="#Education">Education</a></li>
 						<li><a href="#Experience">Experience</a></li>
-						<li><a href="#Skills">Skills</a></li>
 						<li><a href="#Publications">Publications</a></li>
+						<li><a href="#Skills">Skills</a></li>
 						<li><a href="#Hobbies">Hobbies</a></li>
 						<li><a href="#Connect">Connect</a></li>
 					</ul>
@@ -111,16 +111,16 @@
 
 
 		<!-- jumbotron header -->
-		<header>
+		<header id="Home">
 			<div class="jumbotron">
-				<div id="#Home" class="container-fluid">
+				<div class="container">
 					<br />
 					<h1 class="intro-text" style="color:white">Hello</h1>
 					<br />
 					<h3 class="intro-text">I'm <a href="#current" onclick="clicksound.playclip()"><span class="glyphicon glyphicon-volume-up"></span> Sriram Krishnaswamy</a>,</h3>
 					<h3 class="intro-text">an aspiring computational engineer.</h3>
 					<br />
-					<p class="intro-text">
+					<p id="Education" class="intro-text">
 						<img src="img/mugshot.png" alt="Me" id="intro-dp" class="img-circle"/>
 						<br />
 						I am a graduate student with a keen interest in computational methods and high performance computing. 
@@ -136,7 +136,7 @@
 		<br />
 
 		<!-- Education thumbnails -->
-		<div id="#Education" class="container">
+		<div class="container">
 			<div class="row">
 				<div class="col-lg-4 col-md-4">
 					<a href="http://www.ufl.edu/" class="thumbnail">
@@ -198,9 +198,9 @@
 		<br />
 
 		<!-- jumbotron heading -->
-		<header>
+		<header id="Experience">
 			<div class="jumbotron">
-				<div id="#Experience" class="container-fluid">
+				<div class="container">
 					<span class="glyphicon glyphicon-wrench" style="color: white"></span>
 					<h1 class="intro-text" style="color:white">I love getting my hands dirty.</h1>
 				</div>
@@ -312,6 +312,108 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		<!-- Publications -->
+		<div id="Publications" class="container">
+			<div id="accordion" class="panel-group">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							<a href="#collapseOne" data-toggle="collapse" data-parent="accordion">Publications</a>
+						</h3>
+					</div>
+					<div id="collapseOne" class="panel-collapse collapse in">
+						<div class="panel-body">
+							<ul>
+								<li><em>Computational Investigations on the Effects of Gurney Flap on Airfoil Aerodynamics</em> by Shubham Jain, N.Sitaram and Sriram Krishnaswamy in International Scholarly Research Notices</li>
+								<li><em>Exhaustive analysis of Gurney flap as a passive control Mechanism</em> by Sriram Krishnaswamy, Shubham Jain and N.Sitaram in Fluid Mechanics and Fluid Power, IIT Kanpur, December 2014</li>
+								<li><em>Building an Automation Environment for CFD Analysis of Aerofoils using Python and Scheme</em> by Sriram Krishnaswamy and N. Sitaram in the Journal of Advanced Research in Applied Mechanics and Computational Fluid Dynamics</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jumbotron heading -->
+		<header id="Skills">
+			<div class="jumbotron">
+				<div class="container">
+					<span class="glyphicon glyphicon-stats" style="color: white"></span>
+					<h2 class="intro-text" style="color:white">I have developed a unique set of skills through my experience.</h2>
+				</div>
+			</div>
+		</header>
+
+		<!-- Skills -->
+		<div class="container">
+			<h4>Python</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+				</div>
+			</div>
+			<hr />
+			<h4>MATLAB</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+				</div>
+			</div>
+			<hr />
+			<h4>C/C++</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+				</div>
+			</div>
+			<hr />
+			<h4>ANSYS FLUENT</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+				</div>
+			</div>
+			<hr />
+			<h4>ICEM CFD</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+				</div>
+			</div>
+			<hr />
+			<h4>LaTeX</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+				</div>
+			</div>
+			<hr />
+			<h4>Git</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+				</div>
+			</div>
+			<hr />
+			<h4>Unix/Linux</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+				</div>
+			</div>
+			<hr />
+			<h4>OpenFOAM</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+				</div>
+			</div>
+			<hr />
+			<h4>HTML/CSS/JavaScript</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
+				</div>
+			</div>
+			<hr />
+			<h4>Windows</h4>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+				</div>
+			</div>
+			<hr />
 		</div>
 
 
