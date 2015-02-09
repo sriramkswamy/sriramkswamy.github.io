@@ -15,7 +15,7 @@
 
 .jumbotron
 {
-	background: url('http://p1.pichost.me/i/26/1486603.jpg') no-repeat center center fixed;
+	background: url('http://wallko.com/wp-content/uploads/2014/11/Paper-Plane-Desktop-Background.jpg') no-repeat center center fixed;
 }
 
 #intro-dp
@@ -83,3 +83,59 @@
 	display: block;
 }
 
+.glyphicon.glyphicon-cog
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+
+.glyphicon.glyphicon-road
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+
+.glyphicon.glyphicon-phone
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+
+.glyphicon.glyphicon-book
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+
+.fa.fa-linkedin-square
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	color: white;
+}
+
+.glyphicon.glyphicon-envelope
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
+
+.glyphicon.glyphicon-save
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+}
