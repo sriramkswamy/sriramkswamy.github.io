@@ -134,6 +134,15 @@
 	color: white;
 }
 
+.fa.fa-github
+{
+	font-size: 40px;
+	text-align: center;
+	vertical-align: middle;
+	display: block;
+	color: white;
+}
+
 .glyphicon.glyphicon-envelope
 {
 	font-size: 40px;
@@ -151,3 +160,10 @@
 	display: block;
 	color: white;
 }
+
+.hobby-text
+{
+	vertical-align: middle;
+	text-align: center;
+}
+
