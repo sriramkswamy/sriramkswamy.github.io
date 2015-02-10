@@ -3,7 +3,6 @@
 	vertical-align: middle;
 	text-align: center;
    	color: white;
-	text-shadow: black 0.3em 0.3em 0.3em;
 }
 
 .intro-img
@@ -13,14 +12,19 @@
 	margin-right: auto;
 }
 
+#cust-link
+{
+	color: #1524FC;
+}
+
 .jumbotron
 {
-	background: url('http://wallko.com/wp-content/uploads/2014/11/Paper-Plane-Desktop-Background.jpg') no-repeat center center fixed;
+	background: url('http://img513.imageshack.us/img513/2160/galactica2560x1600.jpg') no-repeat center center fixed;
 }
 
 #intro-dp
 {
-	max-width: 125px;
+	max-width: 150px;
 	height: auto;
 }
 
@@ -130,6 +134,7 @@
 	text-align: center;
 	vertical-align: middle;
 	display: block;
+	color: white;
 }
 
 .glyphicon.glyphicon-save
@@ -138,4 +143,5 @@
 	text-align: center;
 	vertical-align: middle;
 	display: block;
+	color: white;
 }
