@@ -12,10 +12,16 @@
 	margin-right: auto;
 }
 
-#cust-link
+#cust-link-1
 {
 	color: #1524FC;
 }
+
+#cust-link-2
+{
+	color: #797DF8;
+}
+
 
 .jumbotron
 {
