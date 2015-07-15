@@ -1,0 +1,257 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{resume}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Sriram}{Krishnaswamy}
+{\urlstyle{same}\href{http://sriramkswamy.github.io}{sriramkswamy.github.io}|
+	+1 (352) 872-8712	| \href{mailto:sriram.krish@ufl.edu}{sriram.krish@ufl.edu}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+
+\subsection{University of Florida}
+\descript{MS Mechanical Engineering}
+\location{May 2016 | Gainesville, FL}
+\location{Cum. GPA: 3.06 / 4.0}
+\sectionsep
+
+\subsection{BITS, Pilani}
+\descript{MSc Chemistry}
+\descript{BE Mechanical Engineering}
+\location{May 2014 | Hyderabad, India}
+\location{Cum. GPA: 7.54 / 10.0 \\
+	Major GPA: 8.07 / 10.0}
+\sectionsep
+
+\subsection{DAV Boys, Gopalapuram}
+\location{Grad. May 2009|  Chennai, India}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links}
+Github:// \href{https://github.com/sriramkswamy}{\bf sriramkswamy} \\
+LinkedIn://  \href{https://www.linkedin.com/in/sriramkswamy}{\bf sriramkswamy} \\
+SSL://  \href{http://web.mae.ufl.edu/~mrinalkumar/Research/research.html}{\bf Stochastic Systems Lab} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Fluid Mechanics II \\
+Fluid Mechanics I \\
+Gas Turbines and Jet Engines \\
+Incompressible flow \\
+Control Systems \\
+\sectionsep
+
+\subsection{Undergraduate}
+Fluid Mechanics \\
+Numerical Methods \\
+Applied Thermodynamics \\
+Mechanics of Solids \\
+CAD and FEA \\
+Linear Algebra \\
+Differential Calculus \\
+Integral Calculus \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+C \textbullet{} C++ \textbullet{} Python \textbullet{} \\
+Shell \textbullet{} MATLAB \textbullet{} \LaTeX\ \\
+\sectionsep
+\subsection{Libraries}
+Boost \textbullet{} Trilinos \\
+\sectionsep
+\subsection{Parallel Libraries}
+Intel MPI \textbullet{} Intel OpenMP \\
+\sectionsep
+\subsection{Softwares}
+ICEM CFD \textbullet{} FLUENT \textbullet{} \\
+ANSYS \textbullet{} OpenFOAM \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.66\textwidth}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Numeca International}
+\descript{| Application Engineer Intern}
+\location{September 2015 - Present | Brussels, Belgium}
+\sectionsep
+
+\runsubsection{Indian Institute of Science}
+\descript{| Summer Intern}
+\location{May 2012 – July 2012 | Bangalore, India}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Vibrational analysis of human body based on Lumped parameter models.
+\item Simulated the effects aircraft seat ejection in SimuLink and MATLAB.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Stochastic Systems Laboratory}
+\descript{| Graduate Researcher}
+\location{Nov 2014 – Aug 2015 | Gainesville, FL}
+\begin{tightemize}
+\item Worked with \textbf{\href{http://plaza.ufl.edu/yfsun/index.html}{Dr. Yifei Sun}} and
+	\textbf{\href{http://web.mae.ufl.edu/~mrinalkumar/index.html}{Prof. Mrinal Kumar}} to create a Parallel
+	Fokker-Planck equation solver based on CPD Tensor methods.
+\item Simulated a 5 dimension 2 body problem
+\end{tightemize}
+
+\runsubsection{Thermal Turbomachines Laboratory}
+\descript{| Honors Thesis}
+\location{June 2013 – May 2014 | Gainesville, FL}
+\begin{tightemize}
+\item Automated the CFD analysis of airfoils using Python and Scheme.
+\item Implemented intelligent data interpretation and post-processing.
+\item Used it analyze the effects of Synthetic jet active flow control in airfoils.
+\item Collaborated with Shubham Jain to analyze the effects of Gurney Flap.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{CanSat 2013}
+\descript{| Team Leader }
+\location{Nov 2012 – June 2013 | Abilene, TX}
+\begin{tightemize}
+\item Led Team Varuna - the first team from BITS, Pilani to a successful launch.
+\item Scored 97.15\% in the Critical Design Review
+\item Raised a sponsorship of \$1,500 and presented the design to the Director of ISRO
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CFD Python Solver}
+\descript{| Independent Project }
+\location{June 2015 – Present | Gainesville, FL}
+\begin{tightemize}
+\item Python based solver for solving 2D Heat equation.
+\item Based on the \textbf{\href{https://itunes.apple.com/us/itunes-u/computational-fluid-dynamics/id452560554?mt=10}
+		{CFD course}} by \textbf{\href{http://lorenabarba.com}{Prof. Lorena Barba}}
+\item Parallelizing the code using mpi4py package.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Hovercraft design}
+\descript{| SAE India }
+\location{Jan 2012 – May 2012 | Hyderabad, India}
+Designed, analyzed and fabricated a single-seater Hovercraft capable of lifting 180 pounds and completed manned
+tests for levitation. Raised a sponsorship of INR 15,000 for the same.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications}
+\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{minipage}
+\end{document}  \documentclass[]{article}
