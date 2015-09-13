@@ -5,3 +5,4 @@
 *.fdb_latexmk
 *.log
 *.out
+/resume/_region_.tex
