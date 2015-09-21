@@ -3,501 +3,558 @@
 <!-- This is my first ever HTML/CSS code and is an online resume of sorts largely inspired by Debhargya Das's site http://debhargyadas.com  -->
 
 <html>
-	<head>
-		<!-- meta information -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- meta information -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	    <!--[if lt IE 9]>
-	      <script src="js/html5shiv.min.js"></script>
-          <script src="js/respond.min.js"></script>
-		<![endif]-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
 
-		<!-- title -->
-		<title>Sriram Krishnaswamy</title>
+    <!-- title -->
+    <title>Sriram Krishnaswamy</title>
 
-		<!-- CSS stylesheets -->
-		<link rel="stylesheet" href="./bootstrap/css/bootstrap.css" type="text/css" media="all" />
-		<link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" type="text/css" media="all" />
-		<link rel="stylesheet" href="./master.css" type="text/css" media="all">
-		<link rel="stylesheet" href="./font-awesome.0/css/font-awesome.min.css" type="text/css" media="all" />
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap-theme.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./master.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./font-awesome.0/css/font-awesome.min.css" type="text/css" media="all" />
 
-		<!-- JS scripts -->
-		<script src="js/blur.js" type="text/javascript" charset="utf-8"></script>
+    <!-- JS scripts -->
+    <script src="js/blur.js" type="text/javascript" charset="utf-8"></script>
 
-		<script type="text/javascript" charset="utf-8">
-			// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
-			// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
-			//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
-			//** Call: uniquevar.playclip() to play sound
+    <script type="text/javascript" charset="utf-8">
+      // Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+      // Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+      //** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+      //** Call: uniquevar.playclip() to play sound
 
-			var html5_audiotypes=
-			{ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
-				"mp3": "audio/mpeg",
-				"mp4": "audio/mp4",
-				"ogg": "audio/ogg",
-				"wav": "audio/wav"
-			};
+      var html5_audiotypes=
+      { //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+      "mp3": "audio/mpeg",
+      "mp4": "audio/mp4",
+      "ogg": "audio/ogg",
+      "wav": "audio/wav"
+      };
 
-			function createsoundbite(sound)
-			{"use strict";
-				var html5audio=document.createElement('audio');
-				if (html5audio.canPlayType)
-				{ //check support for HTML5 audio
-					for (var i=0; i<arguments.length; i++)
-					{
-						var sourceel=document.createElement('source');
-						sourceel.setAttribute('src', arguments[i]);
-						if (arguments[i].match(/\.(\w+)$/i))
-							{sourceel.setAttribute('type', html5_audiotypes[RegExp.$1]);}
-						html5audio.appendChild(sourceel);
-					}
-				html5audio.load();
-				html5audio.playclip=function()
-				{
-					html5audio.pause();
-					html5audio.currentTime=0;
-					html5audio.play();
-				};
-				return html5audio;
-				}
-				else
-				{
-				return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately");}};
-				}
-			}
+      function createsoundbite(sound)
+      {"use strict";
+      var html5audio=document.createElement('audio');
+      if (html5audio.canPlayType)
+      { //check support for HTML5 audio
+      for (var i=0; i<arguments.length; i++)
+                                        {
+                                        var sourceel=document.createElement('source');
+                                        sourceel.setAttribute('src', arguments[i]);
+                                        if (arguments[i].match(/\.(\w+)$/i))
+                                        {sourceel.setAttribute('type', html5_audiotypes[RegExp.$1]);}
+                                        html5audio.appendChild(sourceel);
+                                        }
+                                        html5audio.load();
+                                        html5audio.playclip=function()
+                                        {
+                                        html5audio.pause();
+                                        html5audio.currentTime=0;
+                                        html5audio.play();
+                                        };
+                                        return html5audio;
+                                        }
+                                        else
+                                        {
+                                        return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately");}};
+                                        }
+                                        }
 
-			var clicksound=createsoundbite("./name.wav", "./name.mp3","./name.ogg");
-		</script>
+                                        var clicksound=createsoundbite("./name.wav", "./name.mp3","./name.ogg");
+                                        </script>
 
-		<script>
-  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  			ga('create', 'UA-59563121-1', 'auto');
-  			ga('send', 'pageview');
+      ga('create', 'UA-59563121-1', 'auto');
+      ga('send', 'pageview');
 
-		</script>
+    </script>
 
-	</head>
+  </head>
 
-	<body>
+  <body>
 
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
-		<!-- navbar -->
-		<div class="navbar navbar-default navbar-fixed-top navbar-inverse">
-			<div class="container">
-				<div class="navbar-header">
-					<button class="navbar-toggle" type="button" data-to="collapse" data-target="#mynav">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#Home">Sriram Krishnaswamy</a>
-				</div>
-				<div id="mynav" class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="#Education">Education</a></li>
-						<li><a href="#Experience">Experience</a></li>
-						<li><a href="#Publications">Publications</a></li>
-						<li><a href="#Skills">Skills</a></li>
-						<li><a href="#Hobbies">Hobbies</a></li>
-						<li><a href="#Connect">Connect</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <!-- navbar -->
+    <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-to="collapse" data-target="#mynav">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#Home">Sriram Krishnaswamy</a>
+        </div>
+        <div id="mynav" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Publications">Publications</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Hobbies">Hobbies</a></li>
+            <li><a href="#Connect">Connect</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
 
-		<!-- jumbotron header -->
-		<header id="Home">
-			<div class="jumbotron">
-				<div class="container">
-					<br />
-					<h1 class="intro-text" style="color:black">Hello</h1>
-					<br />
-					<h3 class="intro-text">I'm <a id="cust-link-1" href="#current" onclick="clicksound.playclip()"><span class="glyphicon glyphicon-volume-up"></span> Sriram Krishnaswamy</a></h3>
-					<br />
-					<p id="Education" class="intro-text">
-						<img src="img/mugshot.png" alt="Me" id="intro-dp" class="img-circle"/>
-						<br />
-						<br />
-						I am a graduate student with a keen interest in computational methods and high performance computing.
-						Being highly curious and motivated, I tend to take up many projects that interest me and finish them, often turning them into usable, practical solutions.
-						I religiously follow <a id="cust-link-2" href="http://phdcomics.com/comics.php">PhD comics</a>.
-					</p>
-				</div>
-			</div>
-		</header>
+    <!-- jumbotron header -->
+    <header id="Home">
+      <div class="jumbotron">
+        <div class="container">
+          <br />
+          <h1 class="intro-text" style="color:black">Hello</h1>
+          <br />
+          <h3 class="intro-text">I'm <a id="cust-link-1" href="#current" onclick="clicksound.playclip()"><span class="glyphicon glyphicon-volume-up"></span> Sriram Krishnaswamy</a></h3>
+          <br />
+          <p id="Education" class="intro-text">
+            <img src="img/mugshot.png" alt="Me" id="intro-dp" class="img-circle"/>
+            <br />
+            <br />
+            I am a graduate student with a keen interest in computational methods and high performance computing.
+            Being highly curious and motivated, I tend to take up many projects that interest me and finish them, often turning them into usable, practical solutions.
+            I religiously follow <a id="cust-link-2" href="http://phdcomics.com/comics.php">PhD comics</a>.
+          </p>
+        </div>
+      </div>
+    </header>
 
-		<br />
+    <br />
 
-		<!-- Education thumbnails -->
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-4">
-					<a href="http://www.ufl.edu/" class="thumbnail">
-						<img id="edu-logo" src="img/uf_logo.png" alt="UF Logo" class="img-responsive"/>
-					</a>
-				</div>
-				<div class="col-lg-8 col-md-8">
-					<div class="well">
-						<p>
-							Masters' student in Aerospace Engineering at the <a href="http://www.mae.ufl.edu/">Department of Mechanical and Aerospace Engineering</a>.
-						</p>
-						<p>
-							Currently working at the <a href="http://web.mae.ufl.edu/~mrinalkumar/Research/research.html">Stochastic Systems Lab</a> under <a href="http://web.mae.ufl.edu/~mrinalkumar/index.html">Dr. Mrinal Kumar</a>
-							and along with <a href="http://plaza.ufl.edu/yfsun/index.html">Dr. Yifei Sun</a>. I plan confirm my Masters' thesis topic and committee by the end of Spring '15.
-						</p>
-						<p>
-							My coursework at UF includes
-						</p>
-						<ul>
-							<li>Fluid Mechanics 1</li>
-							<li>Fluid Mechanics 2</li>
-							<li>Control Systems Theory</li>
-							<li>Introduction to Compressible flow</li>
-							<li>Gas Turbines and Jet Engines</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<br />
-			<div class="row">
-				<div class="col-lg-4 col-md-4">
-					<a href="http://www.bits-pilani.ac.in/hyderabad/" class="thumbnail">
-						<img id="edu-logo" src="img/bits_logo.png" alt="BITS Logo" class="img-responsive"/>
-					</a>
-				</div>
-				<div class="col-lg-8 col-md-8">
-					<div class="well">
-						<p>
-							Double majored in Chemistry (Masters') and Mechanical Engineering (Bachelors') with my thesis in Mechanical Engineering to secure an Honors degree.
-						</p>
-						<p>
-							Pioneered the collegiete chapter of <a href="http://saeindia.org/">SAE-India</a> and led the first team from BITS to <a href="http://www.cansatcompetition.com/Main.html">CanSat Competition</a>.
-						</p>
-						<p>
-							My coursework at BITS includes
-						</p>
-						<ul>
-							<li>Numerical Methods</li>
-							<li>CAD (including FEA)</li>
-							<li>Mechanics of Solids</li>
-							<li>Thermodynaics and Heat Transfer</li>
-							<li>Integral and Differential Calculus</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- Education thumbnails -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <a href="http://www.ufl.edu/" class="thumbnail">
+            <img id="edu-logo" src="img/uf_logo.png" alt="UF Logo" class="img-responsive"/>
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+          <div class="well">
+            <p>
+              Masters' student in Mechanical Engineering at the <a href="http://www.mae.ufl.edu/">Department of Mechanical and Aerospace Engineering</a>.
+            </p>
+            <p>
+              Currently working at the <a href="http://web.mae.ufl.edu/~mrinalkumar/Research/research.html">Stochastic Systems Lab</a> under <a href="http://web.mae.ufl.edu/~mrinalkumar/index.html">Dr. Mrinal Kumar</a>
+              and along with <a href="http://plaza.ufl.edu/yfsun/index.html">Dr. Yifei Sun</a>.
+            </p>
+            <p>
+              My coursework at UF includes
+            </p>
+            <ul>
+              <li>Computational Fluid Mechanics</li>
+              <li>Turbulence</li>
+              <li>Fluid Mechanics 1 and 2</li>
+              <li>Control Systems Theory</li>
+              <li>Introduction to Compressible flow</li>
+              <li>Gas Turbines and Jet Engines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <a href="http://www.bits-pilani.ac.in/hyderabad/" class="thumbnail">
+            <img id="edu-logo" src="img/bits_logo.png" alt="BITS Logo" class="img-responsive"/>
+          </a>
+        </div>
+        <div class="col-lg-8 col-md-8">
+          <div class="well">
+            <p>
+              Double majored in Chemistry (Masters') and Mechanical Engineering (Bachelors') with my thesis in Mechanical Engineering to secure an Honors degree.
+            </p>
+            <p>
+              Pioneered the collegiete chapter of <a href="http://saeindia.org/">SAE-India</a> and led the first team from BITS to <a href="http://www.cansatcompetition.com/Main.html">CanSat Competition</a>.
+            </p>
+            <p>
+              My coursework at BITS includes
+            </p>
+            <ul>
+              <li>Numerical Methods</li>
+              <li>CAD (including FEA)</li>
+              <li>Mechanics of Solids</li>
+              <li>Thermodynaics and Heat Transfer</li>
+              <li>Integral and Differential Calculus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<br />
+    <br />
 
-		<!-- jumbotron heading -->
-		<header id="Experience">
-			<div class="jumbotron">
-				<div class="container">
-					<span class="glyphicon glyphicon-wrench" style="color: white"></span>
-					<h1 class="intro-text" style="color:white">I have worked on various projects</h1>
-				</div>
-			</div>
-		</header>
+    <!-- jumbotron heading -->
+    <header id="Experience">
+      <div class="jumbotron">
+        <div class="container">
+          <span class="glyphicon glyphicon-wrench" style="color: white"></span>
+          <h1 class="intro-text" style="color:white">I have worked on various projects</h1>
+        </div>
+      </div>
+    </header>
 
-		<!-- Experience thumbnails -->
-		<div class="row">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-4">
-						<div class="thumbnail">
-							<img src="img/chance.png" alt="Chance image" id="chance-img" class="img-responsive"/>
-							<div class="caption">
-								<h4>Chance constrained reservoir risk allocation</h4>
-								<p>
-									The aim of this research is to predict the optimal cost and allocate appropriate risks for reservoir in a multi-reservoir system.
-									This is carried out by using <a href="http://en.wikipedia.org/wiki/Stochastic_optimization">Stochastic optimization</a> methods and Chance constrained programming.
-									The code is written in MATLAB.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="thumbnail">
-							<img src="img/thesis.png" alt="Thesis image" id="thesis-img" class="img-responsive"/>
-							<div class="caption">
-								<h4>Automating airfoil analysis to identify flow separation and implement control techniques</h4>
-								<p>
-									I worked at the Thermal Turbomachines Lab in <a href="https://www.iitm.ac.in/">IIT Madras</a> under <a href="http://mech.iitm.ac.in/Faculty/ns/home.php">Prof. N. Sitaram</a> (now retired)
-									as a part of my honors thesis. I automated an entire airfoil analysis with the help of Python and ANSYS FLUENT which is now being used in the lab for simulations and led to a few
-									<a href="#Publications">publications</a>.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="thumbnail">
-							<img src="img/cansat.png" alt="Thesis image" id="cansat-img" class="img-responsive"/>
-							<div class="caption">
-								<h4>CanSat Competition 2013</h4>
-								<p>
-									The aim was to build a "Can Satellite" that mimics the functions of a normal satellite such as telemetry, aero-braking system, etc.
-									I raised an amount of $1,500 as sponsorship and we successfully launched our CanSat, Varuna, from Abilene, Texas on the summer of 2013.
-									Subsequently, the design and concept was presented in front of the Director of <a href="http://www.isro.gov.in/">ISRO</a> and future participation.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br />
-		<div class="row">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-4">
-						<div class="thumbnail">
-							<img src="img/naca.png" alt="NACA image" id="naca-img" class="img-responsive"/>
-							<div class="caption">
-								<h4>Flow separation over a NACA4421 airfoil</h4>
-								<p>
-									This was a term project along with a temporary faculty at BITS to understand the nature of flows over airfoils. I modelled a <a href="http://airfoiltools.com/airfoil/details?airfoil=naca4421-il">NACA4421</a>
-									airfoil and simulated the flow over angles of attack varying from 0 to 30 degrees to identify the most effective point of flow control.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="thumbnail">
-							<img src="img/iisc.png" alt="IISC image" id="iisc-img" class="img-responsive"/>
-							<div class="caption">
-								<h4>Vibrational analysis of human body in motion</h4>
-								<p>
-									As a sophomore, I interned at the Indian Institute of Science under <a href="http://www.aero.iisc.ernet.in/users/omkar">Prof. Omkar</a> and also guided by
-									<a href="http://www.aero.iisc.ernet.in/users/sbk">Prof. S.B. Kandagal</a> on certain technical fields. I created a lumped parameter model of the human body
-									with varying degrees of freedom and the accuracy of each model was tested.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4">
-						<div class="thumbnail">
-							<img src="img/hover.png" alt="Hovercraft image" id="hover-img" class="img-responsive"/>
-							<div class="caption">
-								<h4>Hovercraft design and implementation</h4>
-								<p>
-									I organized a workshop on automobile technology and also simultaneously
-									raised a sponsorship for the construction of an electrically operated hovercraft - a total amount of 45,000 INR.
-									The hovercraft was successfully powered by 4 HP electrical motors and manned levitation tests were successful and progress was carried out later as
-									a part of the club.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- Experience thumbnails -->
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/fpe.png" alt="FPE image" id="fpe-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Parallelizing Numerical Solution of High-Dimensional Fokker-Planck Equation</h4>
+                <p>
+                  The numerical solution of high-dimensional Fokker-Planck Equation using Tensor methods, specifically
+                  <a href="https://en.wikipedia.org/wiki/Tensor_rank_decomposition">CPD method</a> method, was devised by
+                  <a href="http://plaza.ufl.edu/yfsun/index.html">Dr. Yifei Sun</a> and prototyped in MATLAB. To achieve better performance and results,
+                  the code is being translated into C++ using <a href="http://www.boost.org/doc/libs/1_59_0/libs/numeric/ublas/doc/">Boost uBLAS</a> libraries and parallelized using
+                  <a href="https://software.intel.com/en-us/articles/getting-started-with-openmp">Intel OpenMP</a> and <a href="https://software.intel.com/en-us/intel-mpi-library">Intel MPI</a>
+                  libraries with the final goal of turning the solver into a library.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/chance.png" alt="Chance image" id="chance-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Chance constrained reservoir risk allocation</h4>
+                <p>
+                  The aim of this research is to predict the optimal cost and allocate appropriate risks for reservoir in a multi-reservoir system.
+                  This is carried out by using <a href="http://en.wikipedia.org/wiki/Stochastic_optimization">Stochastic optimization</a> methods and Chance constrained programming.
+                  The code is written in MATLAB.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/thesis.png" alt="Thesis image" id="thesis-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Automating airfoil analysis to identify flow separation and implement control techniques</h4>
+                <p>
+                  I worked at the Thermal Turbomachines Lab in <a href="https://www.iitm.ac.in/">IIT Madras</a> under <a href="http://mech.iitm.ac.in/Faculty/ns/home.php">Prof. N. Sitaram</a> (now retired)
+                  as a part of my honors thesis. I automated an entire airfoil analysis with the help of Python and ANSYS FLUENT which is now being used in the lab for simulations and led to a few
+                  <a href="#Publications">publications</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/cansat.png" alt="Cansat image" id="cansat-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>CanSat Competition 2013</h4>
+                <p>
+                  The aim was to build a "Can Satellite" that mimics the functions of a normal satellite such as telemetry, aero-braking, etc.
+                  I raised an amount of $1,500 as sponsorship and we successfully launched our CanSat, Varuna, from Abilene, Texas on the summer of 2013.
+                  Subsequently, the design and concept was presented in front of the Director of <a href="http://www.isro.gov.in/">ISRO</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/naca.png" alt="NACA image" id="naca-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Flow separation over a NACA4421 airfoil</h4>
+                <p>
+                  This was a term project along with a temporary faculty at BITS to understand the nature of flows over airfoils. I modelled a 
+                  <a href="http://airfoiltools.com/airfoil/details?airfoil=naca4421-il">NACA4421</a>
+                  airfoil and simulated the flow over angles of attack varying to identify the most effective point of flow control.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/iisc.png" alt="IISC image" id="iisc-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Vibrational analysis of human body in motion</h4>
+                <p>
+                  As a sophomore, I interned at the Indian Institute of Science under <a href="http://www.aero.iisc.ernet.in/users/omkar">Prof. Omkar</a> and also guided by
+                  <a href="http://www.aero.iisc.ernet.in/users/sbk">Prof. S.B. Kandagal</a> on certain technical fields. I created a lumped parameter model of the human body
+                  with varying degrees of freedom based on Boileau and Rakheja model and tested the accuracy of each model.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Publications -->
-		<div id="Publications" class="container">
-			<div id="accordion" class="panel-group">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">
-							<a href="#collapseOne" data-toggle="collapse" data-parent="accordion">Selected Publications</a>
-						</h3>
-					</div>
-					<div id="collapseOne" class="panel-collapse collapse in">
-						<div class="panel-body">
-							<ul>
-								<li><em>Computational Investigations on the Effects of Gurney Flap on Airfoil Aerodynamics</em> by Shubham Jain, N.Sitaram and Sriram Krishnaswamy in International Scholarly Research Notices</li>
-								<li><em>Exhaustive analysis of Gurney flap as a passive control Mechanism</em> by Sriram Krishnaswamy, Shubham Jain and N.Sitaram in Fluid Mechanics and Fluid Power, IIT Kanpur, December 2014</li>
-								<li><em>Building an Automation Environment for CFD Analysis of Aerofoils using Python and Scheme</em> by Sriram Krishnaswamy and N. Sitaram in the Journal of Advanced Research in Applied Mechanics and Computational Fluid Dynamics</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- Publications -->
+    <div id="Publications" class="container">
+      <div id="accordion" class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a href="#collapseOne" data-toggle="collapse" data-parent="accordion">Selected Publications</a>
+            </h3>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <ul>
+                <li><em>Computational Investigations on the Effects of Gurney Flap on Airfoil Aerodynamics</em> by Shubham Jain, N.Sitaram and Sriram Krishnaswamy in International Scholarly Research Notices</li>
+                <li><em>Exhaustive analysis of Gurney flap as a passive control Mechanism</em> by Sriram Krishnaswamy, Shubham Jain and N.Sitaram in Fluid Mechanics and Fluid Power, IIT Kanpur, December 2014</li>
+                <li><em>Building an Automation Environment for CFD Analysis of Aerofoils using Python and Scheme</em> by Sriram Krishnaswamy and N. Sitaram in the Journal of Advanced Research in Applied Mechanics and Computational Fluid Dynamics</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- jumbotron heading -->
-		<header id="Skills">
-			<div class="jumbotron">
-				<div class="container">
-					<span class="glyphicon glyphicon-stats" style="color: white"></span>
-					<h2 class="intro-text" style="color:white">I have developed a unique set of skills through my experience.</h2>
-				</div>
-			</div>
-		</header>
+    <!-- jumbotron heading -->
+    <header id="Skills">
+      <div class="jumbotron">
+        <div class="container">
+          <span class="glyphicon glyphicon-stats" style="color: white"></span>
+          <h2 class="intro-text" style="color:white">I have developed a unique set of skills through my experience...</h2>
+        </div>
+      </div>
+    </header>
 
-		<!-- Skills -->
-		<div class="container">
-			<h4>Python</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-				</div>
-			</div>
-			<hr />
-			<h4>MATLAB</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-				</div>
-			</div>
-			<hr />
-			<h4>C/C++</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-				</div>
-			</div>
-			<hr />
-			<h4>ANSYS FLUENT</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-				</div>
-			</div>
-			<hr />
-			<h4>ICEM CFD</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 65%;">
-				</div>
-			</div>
-			<hr />
-			<h4>LaTeX</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-				</div>
-			</div>
-			<hr />
-			<h4>Git</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
-				</div>
-			</div>
-			<hr />
-			<h4>Unix/Linux</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
-				</div>
-			</div>
-			<hr />
-			<h4>OpenFOAM</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
-				</div>
-			</div>
-			<hr />
-			<h4>HTML/CSS</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-				</div>
-			</div>
-			<hr />
-			<h4>Windows</h4>
-			<div class="progress">
-				<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-				</div>
-			</div>
-			<hr />
-		</div>
+    <!-- Skills -->
+    <div class="container">
+      <h4>Python</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+        </div>
+      </div>
+      <hr />
+      <h4>MATLAB</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+        </div>
+      </div>
+      <hr />
+      <h4>C/C++</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+        </div>
+      </div>
+      <hr />
+      <h4>ANSYS FLUENT</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+        </div>
+      </div>
+      <hr />
+      <h4>ICEM CFD</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+        </div>
+      </div>
+      <hr />
+      <h4>LaTeX</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
+        </div>
+      </div>
+      <hr />
+      <h4>Git</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+        </div>
+      </div>
+      <hr />
+      <h4>Unix/Linux</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">
+        </div>
+      </div>
+      <hr />
+      <h4>OpenFOAM</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 35%;">
+        </div>
+      </div>
+      <hr />
+      <h4>HTML/CSS</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+        </div>
+      </div>
+      <hr />
+      <h4>Windows</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+        </div>
+      </div>
+      <hr />
+    </div>
 
-		<!-- jumbotron heading -->
-		<header id="Hobbies">
-			<div class="jumbotron">
-				<div class="container">
-					<h1 class="intro-text" style="color:white">And now, a little bit about me...</h1>
-				</div>
-			</div>
-		</header>
+    <!-- jumbotron heading -->
+    <header id="Hobbies">
+      <div class="jumbotron">
+        <div class="container">
+          <h2 class="intro-text" style="color:white">...and like to use them for little hobby projects.</h2>
+        </div>
+      </div>
+    </header>
 
-		<!-- Hobbies -->
-		<div class="row">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-3">
-						<div class="thumbnail">
-							<span class="glyphicon glyphicon-cog" style="color: black"></span>
-							<div class="caption">
-								<h4 class="hobby-text">I work on personal projects</h4>
-								<p>
-									I follow many online courses - like <a href="https://itunes.apple.com/us/itunes-u/computational-fluid-dynamics/id452560554?mt=10">Dr. Barba's</a>
-									and <a href="https://www.coursera.org/course/scicomp">Prof. LeVeque's</a> courses and make sure I keep in touch with the <a href="https://projecteuler.net/">fundamentals</a>.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<div class="thumbnail">
-							<span class="glyphicon glyphicon-road" style="color: black"></span>
-							<div class="caption">
-								<h4 class="hobby-text">I love traveling</h4>
-								<p>
-									I like to trek and have been to many places, trekking or otherwise, all over <a href="http://en.wikipedia.org/wiki/South_India">South India</a> and especially in
-									<a href="https://en.wikipedia.org/wiki/Karnataka">Karnataka</a> and <a href="https://en.wikipedia.org/wiki/Tamil_Nadu">Tamil Nadu</a>.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<div class="thumbnail">
-							<span class="glyphicon glyphicon-phone" style="color: black"></span>
-							<div class="caption">
-								<h4 class="hobby-text">I follow technology</h4>
-								<p>
-									I'm fascinated by the level of innovation that is happening currently and always keep myself informed about the latest ones.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-3">
-						<div class="thumbnail">
-							<span class="glyphicon glyphicon-book" style="color: black"></span>
-							<div class="caption">
-								<h4 class="hobby-text">I read a lot</h4>
-								<p>
-									I consume text in all forms - online articles, novels, short stories - and was one of the top 5% of the people using <a href="http://getpocket.com/a/">Pocket</a> last year.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <!-- Hobby projects -->
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/cfd.png" alt="CFD image" id="cfd-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>CFD analysis code</h4>
+                <p>
+                  I have always been interested in CFD and constantly dabble with it. With my coursework and online classes, I keep updating
+                  <a href="https://github.com/sriramkswamy/pycfd">scripts</a>, on CFD constantly.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/data.png" alt="Data image" id="data-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Amateur data analysis and modeling</h4>
+                <p>
+                  this interest started with my course on uncertainity quantification where we were encouraged to come up with interesting problems
+                  of our own and <a href="https://github.com/sriramkswamy/amateurdatascience">I did</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="thumbnail">
+              <img src="img/hover.png" alt="Hovercraft image" id="hover-img" class="img-responsive"/>
+              <div class="caption">
+                <h4>Hovercraft design and implementation</h4>
+                <p>
+                  As a part of SAE-India Collegiate chapter I raised a sponsorship of 45,000 INR for the construction of an electrically operated hovercraft. 
+                  The hovercraft was successfully powered by 4 HP electrical motors and manned levitation tests were successful and progress was carried out later as 
+                  a part of the club.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jumbotron heading -->
+    <header id="Personal">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="intro-text" style="color:white">Finally, a little bit about me...</h1>
+        </div>
+      </div>
+    </header>
 
-		<hr />
+    <!-- Hobbies -->
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <div class="thumbnail">
+              <span class="glyphicon glyphicon-cog" style="color: black"></span>
+              <div class="caption">
+                <h4 class="hobby-text">I like to learn</h4>
+                <p>
+                  I follow many online courses - like <a href="https://itunes.apple.com/us/itunes-u/computational-fluid-dynamics/id452560554?mt=10">Dr. Barba's</a>
+                  and <a href="https://www.coursera.org/course/scicomp">Prof. LeVeque's</a> courses and make sure I keep in touch with the <a href="https://projecteuler.net/">fundamentals</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="thumbnail">
+              <span class="glyphicon glyphicon-road" style="color: black"></span>
+              <div class="caption">
+                <h4 class="hobby-text">I love traveling</h4>
+                <p>
+                  I like to trek and have been to many places, trekking or otherwise, all over <a href="http://en.wikipedia.org/wiki/South_India">South India</a> and especially in
+                  <a href="https://en.wikipedia.org/wiki/Karnataka">Karnataka</a> and <a href="https://en.wikipedia.org/wiki/Tamil_Nadu">Tamil Nadu</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="thumbnail">
+              <span class="glyphicon glyphicon-phone" style="color: black"></span>
+              <div class="caption">
+                <h4 class="hobby-text">I follow technology</h4>
+                <p>
+                  I'm fascinated by the level of innovation that is happening currently and always keep myself informed about the latest ones.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3">
+            <div class="thumbnail">
+              <span class="glyphicon glyphicon-book" style="color: black"></span>
+              <div class="caption">
+                <h4 class="hobby-text">I read a lot</h4>
+                <p>
+                  I consume text in all forms - online articles, novels, short stories - and was one of the top 5% of the people using <a href="http://getpocket.com/a/">Pocket</a> last year.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Connect -->
-		<header id="Connect">
-			<div class="jumbotron">
-				<div class="container">
-					<h1 class="intro-text" style="color:white">Connect with me</h1>
-					<br />
-					<div class="col-md-offset-4 col-md-1">
-						<a href="http://in.linkedin.com/in/sriramkswamy"><i class="fa fa-linkedin-square" style="font-size: 50px"></i></a>
-					</div>
-					<div class="col-md-1">
-						<a href="https://github.com/sriramkswamy"><i class="fa fa-github" style="font-size: 50px"></i></a>
-					</div>
-					<div class="col-md-1">
-						<a href="mailto:sriram.krish@ufl.edu"><span class="glyphicon glyphicon-envelope"></span></a>
-					</div>
-					<div class="col-md-1">
-						<a href="resume/resume.pdf" target="_blank"><span class="glyphicon glyphicon-save"></span></a>
-					</div>
-				</div>
-			</div>
-		</header>
+    <hr />
 
-	</body>
+    <!-- Connect -->
+    <header id="Connect">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="intro-text" style="color:white">Connect with me</h1>
+          <br />
+          <div class="col-md-offset-4 col-md-1">
+            <a href="http://in.linkedin.com/in/sriramkswamy"><i class="fa fa-linkedin-square" style="font-size: 50px"></i></a>
+          </div>
+          <div class="col-md-1">
+            <a href="https://github.com/sriramkswamy"><i class="fa fa-github" style="font-size: 50px"></i></a>
+          </div>
+          <div class="col-md-1">
+            <a href="mailto:sriram.krish@ufl.edu"><span class="glyphicon glyphicon-envelope"></span></a>
+          </div>
+          <div class="col-md-1">
+            <a href="resume/resume.pdf" target="_blank"><span class="glyphicon glyphicon-save"></span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </body>
 </html>
