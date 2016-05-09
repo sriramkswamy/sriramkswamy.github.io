@@ -1,4 +1,0 @@
-Sitemap: http://sriramkswamy.github.io/blog/sitemapindex.xml
-
-User-Agent: *
-Host: sriramkswamy.github.io
