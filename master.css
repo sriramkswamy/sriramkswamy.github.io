@@ -19,7 +19,7 @@
 }
 
 .jumbotron {
-    background: url('https://amazingpict.com/wp-content/uploads/2015/02/brown-blur.jpg') no-repeat center center fixed;
+    background: url(./img/brown-blur.jpg) no-repeat center center fixed;
 }
 
 #intro-dp {
